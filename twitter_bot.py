@@ -109,17 +109,15 @@ def love_tweets_with_message(text_to_search, message = "This is a bot!!"):
 
 ## This is main function of the non steaming bot
 
-def love_bot(screen_name,text_to_search = "#euro",message="this is a bot"):
+def love_bot(screen_name = "",text_to_search = "",message="this is a bot"):
 	print 'Initializing bot....'
 
 
 	## Check if params are present
 	if screen_name != None and screen_name != '':
 		love_user_only(screen_name,message)
-	elif text_to_search != None:
+	elif text_to_search != "":
 		love_tweets_with_message(text_to_search,message)
-
-love_bot('chitraangi')
 
 
 
@@ -301,7 +299,7 @@ def start_conditional_bot(screen_name = "",text_to_match = "",message = "This is
 						print "replied to user -> " , tweet['user']['screen_name'], " with this message ->", message
 						# TwitterAPI.bot_unlike(twitter_object_lookup,tweet['id'])
 
-				## if there are more than 1 hashtags, then take the 1st hashtag and tweet with the given message
+				## if there are more than 1 hashtags, then takes the 1st hashtag and tweet with the given message
 					if len(tweet['entities']['hashtags']) > 0:
 						hashtags = tweet['entities']['hashtags'][0]['text']
 						TwitterAPI.bot_tweet(twitter_object_lookup,'#'+hashtags + ' '+ message)
