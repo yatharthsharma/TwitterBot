@@ -13,13 +13,13 @@ A Python bot that automates several actions on Twitter
 
 TwitterBot can be used to automatically do the following actions:
 
-1. Basic Functionalies:
+1. Basic Functionality:
  - tweet (on your behave)
  - delete your tweet
  - like a tweet
- - unline a tweet
+ - unlike a tweet (dislike a tweet)
  - retweet a tweet
- - unretweet a tweet
+ - unretweet a tweet (undo retweet)
  - reply to a tweet
  - reply to all the tweets of a user
  - reply to all the tweets matching a text
@@ -27,15 +27,15 @@ TwitterBot can be used to automatically do the following actions:
  - delete a DM
  - follow a user
  - unfollow a user
-2. Advance Functionalities
- - Stream data using twitterStream API and perform the basic functionalies (mentioned above) based on a critera.
- - Use twitter REST API to get tweets done in past and perform the basic functionalies based on a critera.
+2. Advanced Functionalities
+ - Stream data using twitterStream API and perform the basic functionalities (mentioned above) based on a criteria.
+ - Use twitter REST API to get tweets done in past and perform the basic functionalities based on a criteria.
 
 
 # Code structure
- - api_access_object -> twitter_api.py contains all the twtter API calls.
- - api_key.csv contains the twitter api keys (I have not pushed my own API key, your are required to add your own API key in this file).
- - twitter_bot.py contains the 4 advance functionalities of twitterBot
+ - api_access_object -> twitter_api.py contains all the twitter API calls.
+ - api_key.csv contains the twitter API keys (I have not pushed my own API key, you are required to add your own API key in this file).
+ - twitter_bot.py contains the 4 advanced functionalities of TwitterBot
 
 # functions description:
 1. functions in twitter_api.py are self explanatory.
@@ -44,7 +44,7 @@ TwitterBot can be used to automatically do the following actions:
  - start_hate_bot(screen_name,text_to_match,message) -> The use of this bot is to do the reverse of the start_like_bot function i.r dislike/unretweets the tweets coming from TwitterStreaming API
  - start_conditional_bot(screen_name,text_to_match,message) -> This performs different actions on the tweets retrieved from twitterStreamin API based on pre-defined conditions as follows.
     - if the author of the tweet is same as the input screen_name, then it likes the tweet.
-    - if the text of the tweets contains the given input text_to_match, then it replies and retweet the tweet + follows the user.
+    - if the text of the tweets contains the given input text_to_match, then it replies and retweets the tweet + follows the user.
     - if there is a tweet with the word 'hate in it, then it sends a 'please don't spread hate' reply to the tweet.
     - if there are more than 1 hashtags in the tweet, then takes the 1st hashtag and tweets using the hashtag and the input message + retweets the tweet.
 3. functions in twitterBot.py: Functions using REST API (This is used to interact with old tweets).
