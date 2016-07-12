@@ -72,7 +72,7 @@ from twitterBot import *
 
 9. start_conditional_bot(screen_name = 'yathshar',text_to_match = 'pokemon',message = 'pokemonGo!!') -> It performs an **OR** search, collecting live tweets containing either tweets done by the author as mentioned in the input param (screen_name) or tweets containing the text as specified in the input param (text_to_match). After collecting the tweets, it performs the actions mentioned in the function description above.
 
-**#RESTAPI bot: **
+**RESTAPI bot: **
 
 1. love_bot(screen_name ='yathshar') ->  collects all the **old** tweets of the input user and performs the actions specified above in the function description.
 2. love_bot(text_to_search= "india") -> collects all the **old** tweets based on the given input parameter **text_to_match** and performs the actions specified above.
