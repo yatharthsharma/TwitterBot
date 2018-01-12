@@ -7,7 +7,8 @@ A Python bot that automates several actions on Twitter
 - You need to install this twitter (https://github.com/sixohsix/twitter) library.
    - sudo pip install twitter
 - You will also need to create an app account on https://dev.twitter.com/apps using your Twitter account
-  - Modify the settings for that app account to allow Read, write, and direct messages
+ - Modify the settings for that app account to allow Read, write, and direct messages
+ - Python 2.7 
 
 # Functionalities
 
